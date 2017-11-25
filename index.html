@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>httprequest(spec)</title>
+        <meta charset="utf-8"/>
+        <meta name="description" content="结合php的curl进行get和post提交" />
+        <link rel="stylesheet" href="dist/spectre-icons.min.css" />
+        <link rel="stylesheet" href="dist/spectre.min.css" />
+        <link rel="stylesheet" href="dist/spectre-exp.min.css" />
+        <link rel="stylesheet" href="dist/spec.css" />
+        <link rel="stylesheet" href="dist/main.css" />
+        <script src="dist/jquery.min.js"></script>
+    </head>
+    <body>
+        <h3>HttpRequest （spec）</h3>
+        <form method="post" action="javascript:;" class="url-form">
+            <input type="hidden" name="type" value="get" class="curl-type" id="type"/>
+            <div class="container form-container col-9">
+                <ul class="tab tab-block">
+                    <li class="tab-item active" data-val="get">
+                        <a href="javascript:;">GET</a>
+                    </li>
+                    <li class="tab-item" data-val="post">
+                        <a href="javascript:;">POST</a>
+                    </li>
+                </ul>
+                <div class="form-group">
+                    <textarea name='url' class="form-input " id="url"  placeholder="http://localhost:80/demo.php" rows="3"></textarea>
+                    <textarea name='params' id="params" class="form-input hide arr-area" id="post"  placeholder="name=apec&age=22" rows="3"></textarea>
+                    <button type="submit" class="btn btn-primary submit-btn">submit</button>
+                </div>
+            </div>
+        </form>
+        <div class="container result-container col-9">
+            <ul class="tab tab-block">
+                <li class="tab-item active" data-val="text">
+                    <a href="javascript:;">TEXT</a>
+                </li>
+                <li class="tab-item" data-val="json">
+                    <a href="javascript:;">JSON</a>
+                </li>
+            </ul>
+            <div class="form-group">
+                <textarea class="form-input text-area" placeholder="text" rows="3"></textarea>
+                <textarea class="form-input hide json-area"  placeholder="json" rows="3"></textarea>
+            </div>
+        </div>
+
+    <h5 class="tips red"></h5>
+    </body>
+</html>
+<script src="dist/main.js"></script>
